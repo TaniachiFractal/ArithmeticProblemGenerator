@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
 
         loadStats()
         loadProblem()
-        startGame()
+        initGameFields()
     }
 
     /**Put stat data to text boxes*/
@@ -102,8 +102,8 @@ class MainActivity : AppCompatActivity() {
         }
         return tempInput == problem.getSolution().toDouble()
     }
-    /**Init game*/
-    private fun startGame()
+    /**Init game fields*/
+    private fun initGameFields()
     {
         fld.solutionInput.isEnabled=true
         fld.btEnter.isEnabled=true
@@ -112,7 +112,7 @@ class MainActivity : AppCompatActivity() {
     /**Start game*/
     private fun btStart_Click()
     {
-        generateProblem();loadProblem();startGame()
+        generateProblem();loadProblem();initGameFields()
     }
     /**Input and check*/
     private fun btEnter_Click()
@@ -123,6 +123,6 @@ class MainActivity : AppCompatActivity() {
         generateProblem()
         loadProblem()
         loadStats()
-        startGame()
+        initGameFields()
     }
 }
